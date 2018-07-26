@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular</title>
+</head>
+<body>
+    
+ 
+    
+    <h2>{{titulo}}</h2>
+    <button (click)="cambiarTitulo()">Cambiar Titulo</button>
+
+    <button (click)="ocultarVideoJuegos(false)" *ngIf="mostrar_videojuegos">Eliminar Lista</button>
+    <button (click)="ocultarVideoJuegos(true)" *ngIf="!mostrar_videojuegos">Mostrar Lista</button>
+    <h3>{{listado}}</h3>
+    <ul *ngIf="mostrar_videojuegos">
+        <li> GTA </li>
+        <li> Prince Of Percia </li>
+        <li> Tekken </li>
+        <li> Mario </li>
+    </ul>
+</body>
+</html>
