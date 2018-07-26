@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Zapatilla } from "../models/zapatilla";
-import { ValueTransformer } from "../../../node_modules/@angular/compiler/src/util";
+import { ValueTransformer } from "@angular/compiler/src/util";
 import {  ZapatillaService } from '../service/zapatilla.service';
 @Component({
     selector: 'zapatillas',

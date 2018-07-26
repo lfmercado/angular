@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Configuracion } from './models/configuracion';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,11 +13,13 @@ export class AppComponent {
   public titulo2: string;
   public title:string="";
   public config ;
+  
 
  constructor(){
    this.title = Configuracion.titulo;
    this.descripcion = Configuracion.descripcion; 
    this.config = Configuracion;
+   
  }
  
   public cambiarTituloConf(value){

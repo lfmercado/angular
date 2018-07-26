@@ -12,12 +12,15 @@ export class ExternoComponent implements OnInit {
   public user: any;
   public userId: any;
   public noValid:boolean;
+  public fecha:any;
+
 
   constructor(private _peticionesServices:PeticionesServices) { }
 
   ngOnInit() {
     this.userId =1;
     this.noValid= false;
+    this.fecha = new Date(2019, 5, 20);
   }
 
   cargarUsuario(){

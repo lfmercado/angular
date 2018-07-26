@@ -3,11 +3,12 @@ import { ModuleWithProviders } from '@angular/core';
 import { Router, RouterModule, Routes } from '@angular/router';
 
 //importar componentes
-import { HomeComponent } from "./home/home.component";
-import { ZapatillasComponent } from "./zapatillas/zapatillas.component";
-import { VideoJuegoComponent } from "./videojuego/videojuego.component";
-import { CursosComponent } from "./cursos/cursos.component";
-import {  ExternoComponent } from './externo/externo.component'
+import { HomeComponent } from './home/home.component';
+import { ZapatillasComponent } from './zapatillas/zapatillas.component';
+import { VideoJuegoComponent } from './videojuego/videojuego.component';
+import { CursosComponent } from './cursos/cursos.component';
+import {  ExternoComponent } from './externo/externo.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 
 //Array Rutas
@@ -19,6 +20,7 @@ const appRoutes: Routes= [
     { path: 'cursos', component:CursosComponent},
     { path: 'cursos/:nombre', component:CursosComponent},
     { path: 'externo', component:ExternoComponent},
+    { path: 'contacto', component:ContactoComponent},
     { path: '**', component:HomeComponent}
 ];
     
