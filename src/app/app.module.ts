@@ -6,7 +6,9 @@ import { VideoJuegoComponent } from './videojuego/videojuego.component';
 import { ZapatillasComponent} from './zapatillas/zapatillas.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
-import { routing, appRoutingProviders } from './app.routing'
+import { routing, appRoutingProviders } from './app.routing';
+import { ExternoComponent } from './externo/externo.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -15,12 +17,14 @@ import { routing, appRoutingProviders } from './app.routing'
     VideoJuegoComponent,
     ZapatillasComponent,
     CursosComponent,
-    HomeComponent
+    HomeComponent,
+    ExternoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    HttpClientModule
   ],
   providers: [
     appRoutingProviders
