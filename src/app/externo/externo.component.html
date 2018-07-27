@@ -1,23 +1,56 @@
+
+<h2>Crear Nuevo Usuario</h2>
+<form #newUser="ngForm" (ngSubmit)="onSubmit(newUser)">
+    <p>
+      <label for="name">Nombre</label><br>
+      <input type="text" name="name" #name="ngModel"  [(ngModel)]="new_user.name" required>
+      <span *ngIf="name.touched && !name">Nombre no es valido</span>
+    </p>
+    
+    <p>
+        <label for="job">Job</label> <br>
+        <input type="text" name="job" #job="ngModel"  [(ngModel)]="new_user.job" required>
+        <span *ngIf="job.touched && !job">Trabajo no es valido</span>
+    </p>
+    <input type="submit" value="Guardar Nuevo Usuario" [disabled]="!newUser.form.valid">
+    
+    </form>
+
+
+<div *ngIf="usuario_guardado">
+  <hr>
+  <h2>Usuario Guardado Con Exito</h2>
+  <p>
+    {{usuario_guardado.name}}
+    <p>
+  <p>
+    {{usuario_guardado.job}}
+  </p>
+  <hr>
+</div>
+<hr>
+<br>
+<!--
 <div>
   {{fecha | date:'dd/MM/yy'}}
+  <br> {{fecha | date:'fullDate' | uppercase}}
+  <br> {{fecha}}
   <br>
-  {{fecha | date:'fullDate' | uppercase}}
-  <br>
-  {{fecha}}
-  <br>
-  <br>
-  {{4 | calculadora : 2}}
+  <br> {{4 | calculadora : 2}}
 </div>
 
-
-<input type="number" [(ngModel)]="userId" (keyUp.enter)="cargarUsuario()"/>
+-->
+<input type="number" [(ngModel)]="userId" (keyUp.enter)="cargarUsuario()" />
 <div *ngIf="!user">
   <p>Cargando...</p>
 </div>
 <div *ngIf="noValid">
   <p>Debes Introducir Un Id Valido</p>
 </div>
-<div *ngIf= "user">
+<div *ngIf="user">
   <img src="{{user.avatar}}" width="200px">
   <h2>{{user.first_name + ' '+ user.last_name}}</h2>
 </div>
+
+<hr>
+
